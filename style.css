@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:wght@100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    color: #243e63
+}
+
+.landing {
+    padding: 32px 16px;
+}
+
+.nav {
+    padding-top: 32px;
+    height: 92px;
+    display: flex;
+}
+
+.row {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.nav__row {
+    display: flex;
+    justify-content: space-between;
+    max-height: 90px;
+
+}
+
+.nav__logo {
+    display: flex;
+    align-items: center;
+    max-width: 40px;
+    max-height: 40px;
+    margin: 16px 0; 
+    
+}
+
+.nav__logo--img {
+    height: 40px;
+}
+
+.nav__logo--title {
+    margin-left: 8px;
+    font-size: 24px;
+    font-weight: 900;
+    height: 30px;
+    width: 80px;
+    color: #243e63;
+}
+
+.nav__links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14.33px;
+    font-weight:400;
+    
+}
+
+.nav__link {
+    margin: 16px 16px;
+
+}
+
+.nav__link .nav__link--primary {
+    width: 125px;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    background-color: #6415ff;
+    color: rgba(255, 255, 255);
+    font-weight: 600;
+}
+
+.nav__link--primary:hover {
+    background-color: #4f10cc;
+}
