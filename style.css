@@ -8,16 +8,45 @@
     color: #243e63
 }
 
+body {
+    max-width: 100vw;
+}
+
+h1 {
+    font-size: 48px;
+    color: #1a202c;
+    line-height: 1.25;
+}
+
+.purple {
+    color: #6415ff;
+}
+
+p {
+    font-size: 16px;
+    margin: 24px 0;
+}
+
 a {
     text-decoration: none;
 }
 
+a:hover {
+    text-decoration: underline;
+    text-decoration-color:#6415ff;
+    transition: all 300ms ease;
+}
+
+.container {
+    padding: 88px 0;
+}
+
 .landing {
-    padding: 32px 16px;
+    padding: 0 16px;
 }
 
 .nav {
-    padding-top: 32px;
+    padding: 32px 0;
     height: 92px;
     display: flex;
 }
@@ -28,11 +57,23 @@ a {
     margin: 0 auto;
 }
 
+button {
+    max-height: 100px;
+    background-color: #6415ff;
+    transition: all 300ms ease;
+}
+
+/*
+
+ Navigation 
+
+ */
 
 .nav__row {
     display: flex;
     justify-content: space-between;
     max-height: 90px;
+    padding-top: 32px;
 
 }
 
@@ -62,11 +103,9 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    font-size: 14.33px;
-    font-weight:400;
-    list-style: none;
-    
-    
+    font-size: 15px;
+    font-weight: 600;
+    list-style: none;   
 }
 
 .nav__link {
@@ -86,3 +125,81 @@ a {
 .nav__link--primary:hover {
     background-color: #4f10cc;
 }
+
+/*
+
+ Header 
+ 
+ */
+
+.header__row {
+    display: flex;
+} 
+
+.header__description {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 0 auto;
+    max-width: 40%;
+}
+
+.header__description--para {
+    margin: 32px 0;
+
+}
+
+.header__img--wrapper {
+    width: calc(100% - 40%);
+}
+
+.header__img {
+    width: 100%;
+    max-width: 800px;
+}
+
+.header__email {
+   width: 100%;
+    max-width: 448px;
+    height: 68px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+
+.header__email--input {
+    width: 100%;
+    border: 2px solid rgb(229, 231, 235);
+    border-radius: 500px;
+    padding: 20px 190px 20px 30px;
+    color: rgb(36, 62, 99);
+    font-size: 16px;
+    font-weight: 500;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    transition: border-color 300ms;
+}
+
+.header__email button {
+    position: absolute;
+    right: 8px;
+    z-index: 2;
+    width: 140px;
+    height: 50px;
+    border: none;
+    border-radius: 500px;
+    background-color: #6415ff;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 300ms;
+}
+
+.header__email button:hover {
+    background-color: #4f10cc;
+}    
