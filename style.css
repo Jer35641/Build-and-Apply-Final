@@ -403,6 +403,10 @@ Quality Work
     display: block;
 }
 
+.quality__button:hover {
+    background-color: #4f10cc;
+}
+
 /*
 
 STEPS
@@ -416,6 +420,7 @@ STEPS
 .steps__list {
     display: flex;
     flex-direction: column;
+    max-width: 400px;
 }
 
 .steps__img {
@@ -434,6 +439,9 @@ STEPS
 .steps__description {
     display: flex;
     flex-direction: column;
+    padding-left: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .step {
@@ -472,13 +480,14 @@ VALUES
 */
 
 .values__row {
-    display: flex; 
-    gap: 40px;
+    display: flex;
+    flex-direction: row-reverse; 
                             
 }
 
 .values__title {
     justify-content: left;
+    letter-spacing: 0.025;
 }
 
 .values__description {
@@ -491,29 +500,48 @@ VALUES
 .values__description--para {
     margin: 32px 0;
     font-size: 18px;
-    line-height: 1.5;
-    color: rgb(124, 139, 161)
+    font-weight: 500;
+    line-height: 1.63;
+    color: #7c8ba1;
 }
 
 .values__img--wrapper {
     width: calc(100% - 50%);
     margin:0 50px;
     display: flex;
-    position: relative;
-    z-index: 2;
+
 }
 
 .values__img {
-    z-index: 1;
     max-width:100%
+}
+
+.value {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 250px;
+    height: 160;
+    margin-top: 32px;
+    margin-right: 32px;
+}
+
+.value__list {
+    display: flex;
+    flex-direction: row;
 }
 
 .value__title {
     font-size: 20px;
+    font-weight: 600;
     display: flex;
 }
 
-.value__img {
+.value__name {
+    margin-left: 13px;
+}
+
+.value__img1 {
     width: 20px;
     height: 20px;
 }
@@ -527,4 +555,132 @@ VALUES
     align-items: center;
     text-align: center;
     justify-content: center;
+}
+
+.value__description--para {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;
+    color: #7c8ba1;
+}
+
+.value__img--wrapper2 {
+    background-color: #feb2b2;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.value__img2 {
+    stroke: rgb(155, 44, 44);;
+    width: 20px;
+    height: 20px;
+}
+
+.value__button:hover {
+    background-color: #4f10cc;
+}
+
+/*
+
+PRICING PLANS
+
+*/
+
+#pricing .row {
+    width: 100%;
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.plans {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.plan {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 65px;
+    margin-right: 34px;
+    width: 100%;
+    max-width: 408px;
+    position: relative;
+    border-radius: 8.5px;
+    padding: 8.5px 34px 0px;
+    color: #1a202c;
+    box-shadow: #00000000 0px 0px 0px 0px, 
+    #00000000 0px 0px 0px 0px, 
+    #0000001a 0px 1px 3px 0px,
+    #0000000f 0px 1px 2px 0px; 
+}
+
+.plan__top-section {
+    display: flex;
+    flex-direction: column;
+    padding-top: 34px;
+    padding-bottom: 34px;
+    line-height: 1.62;
+}
+
+.plan:nth-child(1)
+.plan__line {
+    color: #f7fafc;
+    background: linear-gradient(115deg, #38b2ac, #81e5d9);
+}
+
+.plan__line {
+    height: 8.5px;
+    position: absolute;
+    border-top-left-radius: 8.5px;
+    border-top-right-radius: 8.5px;
+}
+
+.plan__title {
+    font-size: 20px;
+}
+
+.plan__price {
+    font-size: 48px;
+    margin: 4px 0;
+}
+
+.plan__period {
+    font-size: 16px;
+    color: #a0aec0;
+}
+
+.plan__title,
+.plan__price {
+    color: #1a202c;
+}
+
+.plan__title, 
+.plan__price, 
+.plan__period {
+    font-weight: 700;
+    line-height: 1.62;
+}
+
+.plan__middle-section {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.plan__feature {
+    line-height: 1.5;
+    font-size: 16px;
+    color: #718096;
+    font-weight: 500;
+    margin-top: 20px;
 }
