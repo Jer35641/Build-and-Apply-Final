@@ -800,10 +800,11 @@ TESTEMONIALS
     padding-left: 64px;
 }
 
+
+
 .testimonials__img--wrapper {
     width: calc(100% - 50%);
     height: 650px;
-    border: red;
 }
 
 .testimonials__img {
@@ -818,10 +819,18 @@ TESTEMONIALS
     color: #7c8ba1;
 }
 
-.testimonial__rating {
-  color: #f5d72c;
+.testimonial__ratings svg {
+  max-width: 400px;
+}
+
+.testimonial__ratings svg.fa-star path {
+    fill: #FFD700 !important;
 }
 
 .testimonials__h4 {
   justify-content: left;
+}
+
+.testimonial__title {
+  font-size: 20px;
 }
