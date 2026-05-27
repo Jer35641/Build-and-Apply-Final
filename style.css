@@ -369,13 +369,14 @@ FEATURES
 .features {
   display: flex;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 32px;
+  justify-content: center;
 }
 
 .feature__row {
   display: flex;
   padding: 32px 24px;
-  width: 400px;
+  width: 350px;
 }
 
 .feature {
