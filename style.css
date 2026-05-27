@@ -1317,15 +1317,18 @@ TABLETS, SMARTPHONES
   }
 
   .values__title {
+    display: flex;
     justify-content: center;
     margin-top: 32px;
   }
 
   .values__description {
     width: 100%;
-    max-width: 100%;
     text-align: center;
-    margin: 0 auto;
+  }
+
+  .value__description--para {
+    margin-top: 8px;
   }
 
   .value__list {
