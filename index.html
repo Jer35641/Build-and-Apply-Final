@@ -33,7 +33,7 @@
                         </li>
                     </ul>
                     <button class="btn__menu" onclick="openMenu()">
-                        <i class="fa-solid fa-bars"></i>
+                        <i class="fa-solid fa-bars" class="btn__menu--svg"></i>
                     </button>
                     <div class="menu__backdrop">
                         <button class="btn__menu btn__menu--close" onclick="closeMenu()">
@@ -65,7 +65,7 @@
         </nav>
         <header>
             <div class="container">
-                <div class="row header__row">
+                <div class="row">
                     <div class="header__description">
                         <h1> Beautiful React Templates
                             <span class="purple">for you.</span>
@@ -80,9 +80,8 @@
                         </div>
 
                         <p class="customers__img--title">OUR TRUSTED CUSTOMERS</p>
-                        <figure class="customers__img">
-                            <img src="./assets/customers-logo-strip.680ac7c2e8ae28161d2c.png" alt="Logo Strip">
-                        </figure>
+                        <img src="./assets/customers-logo-strip.680ac7c2e8ae28161d2c.png" class="customers__img"
+                            alt="Logo Strip">
                     </div>
                     <figure class="header__img--wrapper">
                         <img class="header__img"
@@ -220,7 +219,7 @@
             </section>
             <section>
                 <div class="container">
-                    <div class="steps__row">
+                    <div class="row steps__row">
                         <div class="steps__img--wrapper">
                             <figure>
                                 <img class="steps__img" src="./assets/hero-screenshot-2.241aac1fbc66db29d873.png">
@@ -275,7 +274,7 @@
             </section>
             <section id="values">
                 <div class="container">
-                    <div class="values__row">
+                    <div class="row values__row">
                         <figure class="values__img--wrapper">
                             <img class="values__img"
                                 src="./assets/prototype-illustration.21bc4b3f612a2f257c3d361067582485.svg"
@@ -320,11 +319,12 @@
                                         We assure you that our templates are designed and created by
                                         professional designers.
                                     </div>
+                                    <button class="value__button">Learn More</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <button class="value__button">Learn More</button>
+                </div>
                 </div>
             </section>
             <section id="pricing">
@@ -416,18 +416,27 @@
                                 <div class="plan__bottom-section">
                                     <button class="plan__button">BUY NOW</button>
                                 </div>
+                            </div>
+                            <svg width="600" height="600" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg"
+                                class="plans__blob">
+                                <g transform="translate(300,300)">
+                                    <path
+                                        d="M82,-98.3C129.8,-57.7,208.2,-54.1,229.6,-26.6C251.1,1,215.6,52.5,172.9,74.9C130.2,97.2,80.3,90.4,37.8,107.5C-4.8,124.7,-40,165.7,-63.3,162.3C-86.5,158.8,-97.8,110.9,-109.3,72.2C-120.7,33.5,-132.2,4.1,-140.1,-37.4C-147.9,-79,-152.1,-132.6,-128.1,-177.3C-104.1,-222.1,-52.1,-258,-17.5,-237.2C17.1,-216.4,34.3,-138.9,82,-98.3Z"
+                                        fill="#FFB4BC"></path>
+                                </g>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
             </section>
             <section class="testimonials">
                 <div class="container">
                     <div class="testimonials__row">
-                        <figure class="testimonials__img--wrapper">
                             <img class="testimonials__img"
                                 src="./assets/love-illustration.c759090fa833369ad6ffb6eb19cacb3e.svg" alt="Love Image">
-                        </figure>
-
                         <div class="testimonials__description">
                             <h4 class="testimonials__h4">TESTIMONIALS</h4>
-                            <h2 class="section__title">Our Clients<span class="purple">Love Us.</span>
+                            <h2 class="testimonials__section--title">Our Clients<span class="purple">Love Us.</span>
                             </h2>
                             <p class="testimonials__para">Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                                 sed
@@ -441,7 +450,7 @@
                                     <i class="fa-solid fa-star"></i>
                                     <i class="fa-solid fa-star"></i>
                                 </div>
-                                <div class="testimonial__title">
+                                    <div class="testimonial__title">
                                     Amazing User Experience
                                     <div class="testimonial__para">
                                         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
@@ -449,6 +458,7 @@
                                         culpa qui officia. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                                         do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                                         veniam, quis nostrud exercitation ullamco.
+                                    </div>
                                     </div>
                                     <div class="testimonial__bottom">
                                         <div class="testimonial__dossier">
@@ -473,7 +483,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
