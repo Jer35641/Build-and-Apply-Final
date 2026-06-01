@@ -119,12 +119,8 @@ LANDING
   padding: 0 32px;
 }
 
-main {
-  margin-bottom: 96px;
-}
-
 body {
-  max-width: 100vw;
+  width: 100vw;
 }
 
 h1 {
@@ -154,7 +150,6 @@ h4 {
 
 a {
   cursor :pointer;
-  text-decoration: underline;
 }
 
 p {
@@ -513,6 +508,7 @@ Quality Work
   max-height: 180px;
   letter-spacing: 1.2px;
   text-align: left;
+  align-items: center;
 }
 
 #quality .purple {
@@ -522,8 +518,10 @@ Quality Work
 
 .quality__description {
   display: flex;
+  align-items: center;
   flex-direction: column;
   width: calc(100% - 50%);
+  max-width: 640px;
 }
 
 .quality__description--para {
@@ -536,6 +534,7 @@ Quality Work
 
 .quality__img--wrapper {
   width: calc(100% - 50%);
+  max-width: 640px;
   border-radius: 4px;
   border: 1px solid rgb(229, 231, 235);
   margin: 0 50px;
@@ -595,6 +594,8 @@ STEPS
 
 .steps__img--wrapper {
   width: calc(100% - 50%);
+  height: 365px;
+  position: relative;
 }
 
 .steps__title {
@@ -636,6 +637,18 @@ STEPS
   color: #7c8ba1;
   margin-top: 13px;
   line-height: 2;
+}
+
+.steps__grid {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 170px;
+    opacity: 0.8;
+    z-index: -10;
+    color: rgb(100, 21, 255);
+    fill: currentColor;
 }
 
 /*
@@ -763,7 +776,7 @@ PRICING PLANS
 #pricing .row {
   width: 100%;
   display: flex;
-  max-width: 1200px;
+  max-width: 100vw;
   margin: 0 auto;
 }
 
@@ -772,7 +785,6 @@ PRICING PLANS
   flex-direction: row;
   position: relative;
   width: 100%;
-  justify-content: space-between;
 }
 
 .plan {
@@ -875,6 +887,8 @@ PRICING PLANS
 
 .plan__bottom-section {
   padding: 34px 68px 34px 68px;
+  display: flex;
+  justify-content: center;
 }
 
 
@@ -1089,17 +1103,20 @@ START
 #start .container {
   width: 100%;
   background-color: #6415ff;
+  border-radius: 10px;
   position: relative;
   overflow: hidden;
+  margin-bottom: 96px;
 }
 
 .start__row {
   display: flex;
-  max-width: 1024px;
+  max-width: 100vw;
   padding: 0 32px;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 2;
 }
 
@@ -1115,6 +1132,7 @@ START
 .start__buttons {
   display: flex; 
   justify-content: flex-end;
+  max-width: 100%;
   color: white;
 }
 
@@ -1125,6 +1143,7 @@ START
   padding: 20px 40px;
   margin: 1px;
   justify-content: center;
+  align-items: center;
   border-radius: 500px;
   cursor: pointer;
   
@@ -1160,6 +1179,17 @@ START
     opacity: 0.5;
 }
 
+.start__blob--2 {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 20rem;
+    width: 20rem;
+    transform: translate(5rem, -16rem);
+    color: rgb(80 17 204);
+    opacity: 0.5;
+}
+
 /*
 
 FOOTER
@@ -1172,7 +1202,8 @@ FOOTER
   overflow: hidden;
   background-color: #6415ff;
   width: 100%;
-  max-width: 1400px;
+  max-width: 100vw;
+  margin-top: 96px;
 }
 
 .footer__columns {
@@ -1189,8 +1220,10 @@ FOOTER
   color:#ffffff;
 }
 
-.footer__column:nth-child(1){
-  z-index: 2
+.footer__column:nth-child(1),
+.footer__column:nth-child(2),
+.footer__column:nth-child(5){
+  z-index: 2;
 }
 
 .footer__column {
@@ -1242,10 +1275,23 @@ FOOTER
     opacity: 0.5;
 }
 
+.footer__blob--2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 320px;
+    height: 320px;
+    transform: translateX(128px) translateY(192px);
+    z-index: 1;
+    opacity: 0.5;
+}
+
 .footer__bottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  overflow: hidden;
   padding: 64px 0;
   background-color: #6415ff;
   border-top: 1px solid #718096;
@@ -1265,6 +1311,11 @@ FOOTER
   margin-right: 8px;
 }
 
+.footer__buttons,
+.footer__bottom--link {
+  z-index: 2;
+}
+
 .footer__bottom--link {
   cursor: pointer;
   background-color: #ffffff;
@@ -1276,6 +1327,7 @@ FOOTER
 
 .footer__bottom--link:nth-child(3) {
   margin-right: 32px;
+  
 }
 
 .footer__bottom--link:hover {
@@ -1294,7 +1346,7 @@ TABLETS, SMARTPHONES
 
 */
 
-@media(max-width: 768px){
+@media(max-width: 1024px){
   .nav__links {
     display: none;
   }
@@ -1383,17 +1435,15 @@ TABLETS, SMARTPHONES
     margin-top: 48px;
     margin-left: auto;
     margin-right: auto;
-    
   }
   
   .customers__img {
-    height: 45px;
+    height: 48px;
     display: flex;
     justify-content: center;
-    margin-left: auto;
-    margin-right: auto;
+    align-items: center;
     margin-top: 16px;
-    padding: 0;
+    padding-right: 40px;
   }
 
   /*
@@ -1492,6 +1542,7 @@ TABLETS, SMARTPHONES
   .steps__img--wrapper {
     display: flex;
     width: 450px;
+    height: 256px;
   }
 
   .steps__description {
@@ -1503,6 +1554,10 @@ TABLETS, SMARTPHONES
 
   .step__number {
     margin-bottom: 8px;
+  }
+
+  .steps__grid {
+    width: 100px;
   }
 
   /*
@@ -1611,6 +1666,7 @@ TABLETS, SMARTPHONES
   .plans {
     display: flex;
     flex-direction: column;
+    max-width: 100%;
   }
 
   .plan {
@@ -1643,6 +1699,7 @@ TABLETS, SMARTPHONES
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    max-width: 100%;
   }
 
   .testimonials__img {
@@ -1709,24 +1766,49 @@ TABLETS, SMARTPHONES
 
   #start .container{
     width: 100%;
-    height: 350px;
+    height: auto;
+    padding: 80px 0;
   }
 
   .start__row {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
   }
 
   .start__title {
+    font-size: 24px;
     width: 100%;
     align-items: center;
     justify-content: center;
+    text-align: center;
   }
 
   .start__buttons {
     z-index: 1;
+    margin-top: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+  }
+
+  .start__btn:nth-child(1),
+  .start__btn:nth-child(2) {
+    max-width: 130px;
+    max-height: 45px;
+    padding: 12px 24px;
+    font-size: 14px;
+    display: flex;
+  }
+
+  .start__btn:nth-child(1) {
+    margin-right: 0;
+  }
+
+  .start__btn:nth-child(2) {
+    margin-top: 16px;
   }
 
   /*
@@ -1735,9 +1817,18 @@ TABLETS, SMARTPHONES
 
   */
 
+  .footer__columns,
+  .footer__bottom {
+    width: 100vw;
+    height: auto;
+  }
+
+  .footer__row {
+    width: 100vw;
+    
+  }
+  
   .footer__columns {
-    width: 100%;
-    height: 650px;
     display: flex;
     justify-content: flex-start;
   }
@@ -1748,10 +1839,14 @@ TABLETS, SMARTPHONES
   }
 
   .footer__bottom {
-    width: 100%;
+    width: 100vw;
     height: 300px;
     display: flex;
     flex-direction: column;
+  }
+
+  .footer__link::after {
+    width: 25%;
   }
 }
 
